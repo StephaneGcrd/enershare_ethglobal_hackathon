@@ -9,11 +9,10 @@ contract ProjectToken {
     uint256 initialPricePerToken = 1;
 
     uint256 public treasurery; // 0 in the beginning, fills up with ICO
-    address owner;
+    address public owner;
 
     mapping(address => uint256) balances;
 
-    event Transfer(address indexed _from, address indexed _to, uint _value);
 
     /**
      * @dev Set contract deployer as owner
