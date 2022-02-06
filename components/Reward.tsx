@@ -24,8 +24,8 @@ export const Reward = () => {
 
   return (
     <Box textStyle="p">
-      You own <Box display="inline">{ratio * 100} %</Box> of the project. You have the right to
-      claim {ratio * 100} % of {parseFloat(formatEther(treasurery))} ETH.
+      {/*       You own <Box display="inline">{ratio * 100} %</Box> of the project. You have the right to
+      claim {ratio * 100} % of {parseFloat(formatEther(treasurery))} ETH. */}
       {/*       ({parseFloat(formatEther(balance)) / 100} % of the bike) */}
     </Box>
   );

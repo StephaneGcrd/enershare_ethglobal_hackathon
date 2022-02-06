@@ -61,7 +61,7 @@ const Account = ({ triedToEagerConnect }: AccountProps) => {
   }
 
   if (account) {
-    return <Box>Your address: {account}</Box>;
+    return null;
   }
 
   return null;

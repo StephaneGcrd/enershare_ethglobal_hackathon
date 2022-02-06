@@ -6,11 +6,13 @@ import useEagerConnect from 'hooks/useEagerConnect';
 import { useWeb3React } from '@web3-react/core';
 import { Balance } from 'components/Balance';
 import { Supply } from 'components/Supply';
-import { Treasurery } from 'components/Treasurery';
+
 import { Buy } from 'components/Buy';
-import { AddTreasurery } from 'components/AddTreasurery';
-import { Reward } from 'components/Reward';
+
 import { Funding } from 'components/Funding';
+import { Rewards } from 'components/Rewards';
+import { Intro } from 'components/Intro';
+import { AddTreasurery } from 'components/AddTreasurery';
 
 function Home() {
   const { account, library } = useWeb3React();
@@ -23,16 +25,16 @@ function Home() {
         <title>Enershare</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Box
         width="100%"
-        height="100vh"
+        height="150vh"
         bg="lightGreen"
         display="flex"
         justifyContent="center"
         alignItems="center"
       >
         <Box>
+          <Intro />
           <Account triedToEagerConnect={triedToEagerConnect} />
           {isConnected && (
             <Box
@@ -56,7 +58,7 @@ function Home() {
                 <Buy />
               </Box>
               <Box>
-                <Box textStyle="p" mb={2}>
+                <Box textStyle="h3" mb={2}>
                   Investor panel
                   <hr />
                 </Box>
@@ -64,25 +66,27 @@ function Home() {
                 <Box display="flex" justifyContent="space-between" mb={2}>
                   <Box>
                     <Balance />
-                    <Supply />
-                    <Reward />
+                    {/* <Supply /> */}
+                    <Rewards />
                   </Box>
                 </Box>
               </Box>
-              <Box>
+              {/*               <Box>
                 <Box textStyle="p" mb={2}>
                   Admin panel
                   <hr />
                 </Box>
                 <Treasurery />
                 <AddTreasurery />
-              </Box>
+              </Box> */}
 
               {/*  <Transfer /> */}
             </Box>
           )}
         </Box>
       </Box>
+      <Box textStyle="h1">Admin panel</Box>
+      <AddTreasurery />
     </>
   );
 }

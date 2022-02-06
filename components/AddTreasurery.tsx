@@ -27,8 +27,8 @@ export const AddTreasurery = () => {
   const buyToken = async () => {
     if (!contract) return;
     setTxHash(null);
-    const tx = await contract.addTreasurery({
-      value: ethers.utils.parseEther('0.001'),
+    const tx = await contract.addRewards({
+      value: ethers.utils.parseEther('0.01'),
     });
     setTxHash(tx.hash);
 
@@ -41,9 +41,10 @@ export const AddTreasurery = () => {
       isClosable: true,
     });
   };
+
   return (
     <Button onClick={buyToken} variant="outlined">
-      {txHash ? <Spinner size="sm" /> : 'Add 0.001 ETH to treasurery'}
+      {txHash ? <Spinner size="sm" /> : 'Generate a reward of 0.01 ETH'}
     </Button>
   );
 };

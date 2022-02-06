@@ -27,8 +27,8 @@ export const Buy = () => {
   const buyToken = async () => {
     if (!contract) return;
     setTxHash(null);
-    const tx = await contract.buyICO(ethers.utils.parseUnits('0.001', 18), {
-      value: ethers.utils.parseEther('0.001'),
+    const tx = await contract.buyICO(ethers.utils.parseUnits('0.01', 18), {
+      value: ethers.utils.parseEther('0.01'),
     });
     setTxHash(tx.hash);
 
@@ -41,5 +41,9 @@ export const Buy = () => {
       isClosable: true,
     });
   };
-  return <Button onClick={buyToken}>{txHash ? <Spinner size="sm" /> : 'Buy 0.001 tokens'}</Button>;
+  return (
+    <Button onClick={buyToken} bg="electricYellow" color="black">
+      {txHash ? <Spinner size="sm" /> : `Buy 0.01 tokens for 0.01 ETH`}
+    </Button>
+  );
 };

@@ -8,6 +8,13 @@ const abi = [
   },
   {
     inputs: [],
+    name: 'addRewards',
+    outputs: [],
+    stateMutability: 'payable',
+    type: 'function',
+  },
+  {
+    inputs: [],
     name: 'addTreasurery',
     outputs: [],
     stateMutability: 'payable',
@@ -59,10 +66,68 @@ const abi = [
     type: 'function',
   },
   {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '_id',
+        type: 'uint256',
+      },
+    ],
+    name: 'claimReward',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: 'auth',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'payable',
+    type: 'function',
+  },
+  {
     inputs: [],
     name: 'claimTreasurery',
     outputs: [],
     stateMutability: 'payable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: '_id',
+        type: 'uint256',
+      },
+    ],
+    name: 'getClaimAuth',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: 'auth',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'getRewards',
+    outputs: [
+      {
+        components: [
+          {
+            internalType: 'uint256',
+            name: 'amount',
+            type: 'uint256',
+          },
+        ],
+        internalType: 'struct ProjectToken.Reward[]',
+        name: '',
+        type: 'tuple[]',
+      },
+    ],
+    stateMutability: 'view',
     type: 'function',
   },
   {
@@ -107,5 +172,5 @@ const abi = [
 ];
 
 export default function useTokenContract() {
-  return useContract('0xde759b8f4bda5c853cbd63c24ea02e886a1fee09', abi);
+  return useContract('0x388231a21139484a9ae01622390209e49fbbd8b8', abi);
 }

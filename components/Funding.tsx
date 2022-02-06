@@ -23,8 +23,8 @@ export const Funding = () => {
 
   return (
     <Box>
-      <Progress hasStripe value={ratio * 100 > 3 ? ratio * 100 : 3} />
-      <Box textStyle="p">{ratio * 100} % of the project is funded</Box>
+      <Progress hasStripe value={ratio * 100} />
+      <Box textStyle="p">{ratio * 100} % of the equity has been sold</Box>
     </Box>
   );
 };
