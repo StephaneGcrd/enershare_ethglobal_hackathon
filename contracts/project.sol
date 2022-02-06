@@ -3,7 +3,6 @@
 pragma solidity ^0.8.10;
 
 contract ProjectToken {
-
     uint256 public totalSupply = 1e19;
     uint256 public circulatingSupply = 0;
     uint256 initialPricePerToken = 1;
@@ -12,7 +11,6 @@ contract ProjectToken {
     address public owner;
 
     mapping(address => uint256) balances;
-
 
     /**
      * @dev Set contract deployer as owner
