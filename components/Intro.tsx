@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Link as Clink } from '@chakra-ui/react';
+import Link from 'next/link';
 
 export const Intro = () => {
   return (
@@ -11,7 +12,11 @@ export const Intro = () => {
         This app can demonstrate how one can use blockchain to make renewable energy assets more
         accessible. It has been made as part of the ETH Road to Web3 Hackaton.
         <br />
-        Builder: Stéphane Guichard, Jan. 2022
+        Builder:{' '}
+        <Clink borderBottom="1px solid black">
+          <Link href="https://stephane.guichard.co">Stéphane Guichard</Link>
+        </Clink>
+        , Feb. 2022
         <br />
         <br />
       </Box>
