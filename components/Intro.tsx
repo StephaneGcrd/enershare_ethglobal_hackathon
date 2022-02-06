@@ -12,6 +12,10 @@ export const Intro = () => {
         This app can demonstrate how one can use blockchain to make renewable energy assets more
         accessible. It has been made as part of the ETH Road to Web3 Hackaton.
         <br />
+        To test the app, you need to set-up your metamask wallet on the Ethereum Ropsten test
+        network.
+        <br />
+        <br />
         Builder:{' '}
         <Clink borderBottom="1px solid black">
           <Link href="https://stephane.guichard.co">Stéphane Guichard</Link>

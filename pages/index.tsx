@@ -30,7 +30,7 @@ function Home() {
         bg="lightGreen"
         display="flex"
         justifyContent="center"
-        alignItems="center"
+        pt={8}
       >
         <Box>
           <Intro />
