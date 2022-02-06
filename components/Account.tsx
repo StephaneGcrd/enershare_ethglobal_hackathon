@@ -3,7 +3,7 @@ import { UserRejectedRequestError } from '@web3-react/injected-connector';
 import { useEffect, useState } from 'react';
 import { injected } from 'connectors';
 import useMetaMaskOnboarding from 'hooks/useMetaMaskOnboarding';
-import { Button, Box } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 
 type AccountProps = {
   triedToEagerConnect: boolean;

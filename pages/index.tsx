@@ -5,7 +5,6 @@ import Account from 'components/Account';
 import useEagerConnect from 'hooks/useEagerConnect';
 import { useWeb3React } from '@web3-react/core';
 import { Balance } from 'components/Balance';
-import { Supply } from 'components/Supply';
 
 import { Buy } from 'components/Buy';
 

@@ -13,11 +13,11 @@ import useTxReceipt from 'hooks/useTxReceipt';
 import useRewardClaimed from 'hooks/useRewardClaimed';
 
 const RewardBox = ({ id, reward, ratio }: any) => {
-  if (!reward) return null;
-
   const { data: auth } = useRewardClaimed(id as string);
 
-  const { amount } = { ...reward };
+  if (!reward) return null;
+
+  const { amount } = reward;
   return (
     <Box
       border="1px solid grey"
